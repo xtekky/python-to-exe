@@ -1,8 +1,11 @@
 import os, shutil, time, sys
-os.system('cls')
+
+os.system('pip install -q pyinstaller')
+
+os.system('cls' if os.name == 'nt' else 'clear')
 name = input('Name > ')
 
-os.system('cls')
+os.system('cls' if os.name == 'nt' else 'clear')
 os.system(f'pyinstaller --noconfirm --onefile --console --icon "./icon.ico" --name "{name}"  "./main.py"')
 
 
